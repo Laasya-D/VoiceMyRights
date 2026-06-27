@@ -1,11 +1,15 @@
 const express = require("express");
 const cors = require("cors");
+const path = require("path");
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
-app.use(cors({ origin: "*" }));
+app.use(cors());
 app.use(express.json());
+
+// Serve frontend files
+app.use(express.static(__dirname));
 
 // ── Risk keyword definitions ──────────────────────────────────────────────────
 const RISK_KEYWORDS = [
@@ -115,14 +119,15 @@ function analyzeText(text) {
   if (dataPrivacyConcerns.length > 0) {
     summaryPoints.push(`${dataPrivacyConcerns.length} data-privacy reference(s) detected.`);
   }
-
+  
   return {
+    originalText: text,
     riskScore,
     summary: summaryPoints.join(" "),
-    redFlags: redFlags.length > 0 ? redFlags : ["No significant red flags detected."],
-    dataPrivacyConcerns: dataPrivacyConcerns.length > 0 ? dataPrivacyConcerns : ["No explicit privacy concerns found."],
-    suggestions,
-  };
+    redFlags: redFlags.length ? redFlags : ["No significant red flags detected."],
+    dataPrivacyConcerns: dataPrivacyConcerns.length ? dataPrivacyConcerns : ["No explicit privacy concerns found."],
+    suggestions
+};
 }
 
 // ── Routes ────────────────────────────────────────────────────────────────────
@@ -142,6 +147,21 @@ app.post("/analyze", (req, res) => {
 });
 
 app.get("/health", (_req, res) => res.json({ status: "ok" }));
+
+// Home page
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "index.html"));
+});
+
+// Results page
+app.get("/results", (req, res) => {
+  res.sendFile(path.join(__dirname, "results.html"));
+});
+
+// Report page
+app.get("/report", (req, res) => {
+  res.sendFile(path.join(__dirname, "report.html"));
+});
 
 app.listen(PORT, () => {
   console.log(`VoiceMyRights backend running → http://localhost:${PORT}`);
