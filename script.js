@@ -1,5 +1,5 @@
 // VoiceMyRights — frontend ↔ backend bridge
-const BACKEND_URL = "http://localhost:3000";
+const BACKEND_URL = "https://voiceyourrights-production.up.railway.app";
 
 // ── Sample document presets ───────────────────────────────────────────────────
 const PRESETS = {
