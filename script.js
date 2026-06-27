@@ -1,5 +1,5 @@
 // VoiceMyRights — frontend ↔ backend bridge
-const BACKEND_URL = "https://voicemyrights.onrender.com/";
+const BACKEND_URL = "http://localhost:3000";
 
 // ── Sample document presets ───────────────────────────────────────────────────
 const PRESETS = {
@@ -95,7 +95,7 @@ setTimeout(() => {
 
   } catch (err) {
     console.error("Analysis failed:", err);
-    alert(`Analysis failed: ${err.message}\n\nMake sure the backend is running on https://voicemyrights.onrender.com/`);
+    alert(`Analysis failed: ${err.message}\n\nMake sure the backend is running on http://localhost:3000`);
     analyzeBtn.innerHTML = `
   <span class="spinner"></span>
   Analyzing...
