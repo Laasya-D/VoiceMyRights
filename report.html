@@ -10,90 +10,97 @@
     <title>VoiceMyRights Report</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.png">
 
 </head>
 
 <body>
 
-    <div class="report-container">
+    <nav class="navbar">
 
-        <h1>VoiceMyRights Report</h1>
+    <a href="index.html" class="logo">
+        Voice<span class="purple">MyRights</span>
+    </a>
 
-        <h2>Your contract translated into plain English</h2>
+    <a
+        href="YOUR_GITHUB_REPO_LINK"
+        class="github-link"
+        target="_blank">
+        Source Code
+    </a>
 
-        <div class="report-score">
+</nav>
 
-            <h3>Safety Score</h3>
 
-            <div class="report-number">
-                82/100
-            </div>
+    <body>
 
-            <p>Moderate Risk</p>
+<div class="report-container">
 
+    <h1>VoiceMyRights Report</h1>
+
+    <h2>Your contract translated into plain English</h2>
+
+    <div class="report-score">
+
+        <h3>Risk Score</h3>
+
+        <div class="report-number">
+            0/100
         </div>
 
-        <div class="top-concerns">
+        <p id="riskText"></p>
 
-            <h3>Top Concerns</h3>
+    </div>
 
-            <div class="risk-pill red-pill">
-                Data Sharing
-            </div>
+    <div class="top-concerns">
 
-            <div class="risk-pill yellow-pill">
-                Auto Renewal
-            </div>
+        <h3>Top Concerns</h3>
 
-        </div>
+        <div id="pillContainer"></div>
 
-        <div class="summary-box">
+    </div>
 
-            <h3>Summary</h3>
+    <div class="summary-box">
 
-            <ul>
+        <h3>Summary</h3>
 
-                <li>Data may be shared with third parties</li>
+        <p id="summaryText"></p>
 
-                <li>Subscription renews automatically</li>
+    </div>
 
-                <li>Standard personal usage allowed</li>
+    <div class="warning-box">
 
-            </ul>
+        <h3>Detected Issues</h3>
 
-        </div>
+        <ul id="warningList"></ul>
 
-        <div class="warning-box">
+    </div>
 
-            <h3>Watch Out For</h3>
+    <div class="summary-box">
 
-            <ul>
+        <h3>Recommendations</h3>
 
-                <li>🔴 Data Sharing</li>
+        <ul id="suggestionList"></ul>
 
-                <li>🟡 Auto Renewal</li>
+    </div>
 
-            </ul>
+    <div class="report-actions">
 
-        </div>
+        <button class="download-btn">
+            Download Report
+        </button>
 
-        <div class="report-actions">
+        <button class="share-btn">
+            Share Report
+        </button>
 
-    <button class="download-btn">
-
-        Download Report
-
-    </button>
-
-    <button class="share-btn">
-
-        Share Report
-
-    </button>
+    </div>
 
 </div>
 
-    </div>
+<script src="report.js"></script>
+
+</body>
 
 </body>
 

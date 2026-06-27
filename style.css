@@ -577,3 +577,562 @@ button:hover{
 
     transform:translateY(-3px);
 }
+
+@media print {
+
+body{
+    background:white !important;
+    color:#111 !important;
+}
+
+.report-container{
+    background:white !important;
+    color:#111 !important;
+    box-shadow:none !important;
+}
+
+*{
+    color:#111 !important;
+}
+
+button{
+    display:none;
+}
+
+}
+
+
+/* ===================================================
+   UI POLISH PATCH - Add at end of style.css
+   =================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body{
+    font-family:'Inter',sans-serif;
+}
+
+/* Better widths */
+.container,
+.results-container,
+.report-container{
+    width:min(1050px,90%);
+}
+
+/* Better spacing */
+.results-container,
+.report-container{
+    padding:50px 20px;
+}
+
+/* Cleaner headings */
+h1{
+    font-size:60px;
+    letter-spacing:-1px;
+}
+
+h2{
+    font-weight:600;
+}
+
+p{
+    line-height:1.6;
+}
+
+/* Cards */
+.card,
+.score-box,
+.report-score,
+.summary-box,
+.warning-box,
+.top-concerns{
+
+    background:rgba(255,255,255,.06);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(16px);
+
+    box-shadow:0 12px 35px rgba(0,0,0,.18);
+
+}
+
+/* Hover */
+.card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 16px 35px rgba(0,0,0,.35);
+
+}
+
+/* Better score */
+.score-number,
+.report-number{
+
+    font-size:76px;
+
+    letter-spacing:-3px;
+
+}
+
+/* Buttons */
+
+button{
+
+    font-weight:600;
+
+    border-radius:14px;
+
+}
+
+#analyzeBtn{
+
+    background:linear-gradient(135deg,#7c3aed,#9333ea);
+
+}
+
+.download-btn{
+
+    background:#22c55e;
+
+}
+
+.share-btn{
+
+    background:#475569;
+
+}
+
+button:hover{
+
+    transform:translateY(-3px);
+
+}
+
+/* Pills */
+
+.red-pill{
+
+    background:rgba(239,68,68,.18);
+
+    color:#fca5a5;
+
+    border:1px solid rgba(239,68,68,.35);
+
+}
+
+.yellow-pill{
+
+    background:rgba(245,158,11,.18);
+
+    color:#fde68a;
+
+    border:1px solid rgba(245,158,11,.35);
+
+}
+
+/* Borders */
+
+.red{
+
+    border-left:6px solid #ef4444;
+
+}
+
+.yellow{
+
+    border-left:6px solid #f59e0b;
+
+}
+
+.green{
+
+    border-left:6px solid #22c55e;
+
+}
+
+/* Better textarea */
+
+textarea{
+
+    transition:.25s;
+
+}
+
+textarea:focus{
+
+    box-shadow:0 0 0 4px rgba(168,85,247,.25);
+
+}
+
+/* Smooth animation */
+
+.card,
+.score-box,
+.report-score{
+
+    animation:fadeIn .45s ease;
+
+}
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+
+transform:translateY(15px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:none;
+
+}
+
+}
+
+/* Better report lists */
+
+.summary-box li,
+.warning-box li{
+
+    margin-bottom:12px;
+
+    line-height:1.7;
+
+}
+
+/* Print */
+
+@media print{
+
+body{
+
+background:white !important;
+
+color:black !important;
+
+}
+
+.report-container{
+
+background:white !important;
+
+box-shadow:none !important;
+
+}
+
+button{
+
+display:none !important;
+
+}
+
+*{
+
+color:black !important;
+
+text-shadow:none !important;
+
+}
+
+}
+
+
+/* -------- NAVBAR -------- */
+
+.navbar{
+
+width:min(1100px,90%);
+
+margin:25px auto;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+}
+
+.logo{
+
+font-size:28px;
+
+font-weight:800;
+
+}
+
+.nav-links{
+
+display:flex;
+
+gap:30px;
+
+}
+
+.nav-links a{
+
+text-decoration:none;
+
+color:#cbd5e1;
+
+transition:.3s;
+
+}
+
+.nav-links a:hover{
+
+color:white;
+
+}
+
+/* Hero */
+
+.hero-text{
+
+max-width:760px;
+
+margin:20px auto 40px;
+
+font-size:20px;
+
+color:#cbd5e1;
+
+line-height:1.7;
+
+}
+
+/* Samples */
+
+.sample-title{
+
+margin:35px 0 20px;
+
+text-align:center;
+
+font-size:20px;
+
+font-weight:600;
+
+}
+
+.sample-buttons{
+
+display:flex;
+
+justify-content:center;
+
+gap:15px;
+
+flex-wrap:wrap;
+
+margin-bottom:25px;
+
+}
+
+/* Analyze button */
+
+#analyzeBtn{
+
+display:block;
+
+margin:35px auto;
+
+width:100%;
+
+max-width:420px;
+
+}
+
+/* Footer features */
+
+.features{
+
+display:flex;
+
+justify-content:center;
+
+gap:50px;
+
+margin-top:45px;
+
+flex-wrap:wrap;
+
+color:#cbd5e1;
+
+}
+
+.features div{
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+font-size:15px;
+
+}
+
+.spinner{
+
+    width:18px;
+    height:18px;
+
+    border:3px solid rgba(255,255,255,.3);
+    border-top:3px solid white;
+
+    border-radius:50%;
+
+    display:inline-block;
+
+    margin-right:10px;
+
+    animation:spin .8s linear infinite;
+
+    vertical-align:middle;
+
+}
+
+@keyframes spin{
+
+from{
+
+transform:rotate(0deg);
+
+}
+
+to{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+button{
+
+transition:.25s ease;
+
+}
+
+button:active{
+
+transform:scale(.97);
+
+}
+
+.results-container,
+.report-container{
+
+animation:appear .45s ease;
+
+}
+
+@keyframes appear{
+
+from{
+
+opacity:0;
+
+transform:translateY(20px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:none;
+
+}
+
+}
+
+.card:hover{
+
+transform:translateY(-5px);
+
+border-color:#7c3aed;
+
+}
+
+.shake{
+
+animation:shake .3s;
+
+}
+
+@keyframes shake{
+
+0%{transform:translateX(0);}
+25%{transform:translateX(-6px);}
+50%{transform:translateX(6px);}
+75%{transform:translateX(-6px);}
+100%{transform:translateX(0);}
+
+}
+
+.navbar{
+
+    width:min(1100px,90%);
+
+    margin:25px auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.logo{
+
+    text-decoration:none;
+
+    color:white;
+
+    font-size:28px;
+
+    font-weight:800;
+
+}
+
+.logo:hover{
+
+    opacity:.9;
+
+}
+
+.github-link{
+
+    text-decoration:none;
+
+    color:#cbd5e1;
+
+    padding:10px 18px;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:12px;
+
+    background:rgba(255,255,255,.04);
+
+    transition:.25s;
+
+}
+
+.github-link:hover{
+
+    background:rgba(124,58,237,.15);
+
+    border-color:#7c3aed;
+
+}
