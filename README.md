@@ -135,8 +135,8 @@ Download PDF
 
 ## 👥 Team
 
-- Your Name
-- Teammate Name
+- Bhargavi Dorle
+- Laasya Dasika
 
 ---
 
