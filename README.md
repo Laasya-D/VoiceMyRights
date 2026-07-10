@@ -1,5 +1,5 @@
 # VoiceMyRights
-# ⚖️ VoiceMyRights
+# VoiceMyRights
 
 > AI-powered legal agreement analyzer that translates complex contracts into plain English.
 
