@@ -142,4 +142,4 @@ Download PDF
 
 ## 📜 License
 
-Built for a Hackathon ❤️
+Built for a Hackathon 
